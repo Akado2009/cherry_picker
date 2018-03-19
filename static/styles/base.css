@@ -1,0 +1,191 @@
+body {
+  background-color: #3D3D3D;
+  font-family: 'IBM Plex Serif', serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+  margin: 30px 0px;
+}
+
+h3 {
+  font-size: 24px;
+  color: white;
+  margin: 30px 0px;
+}
+
+.inner-container {
+  margin: 60px;
+}
+
+/* HEADER */
+
+.header {
+  margin: auto 60px;
+  min-height: 60px;
+  line-height: 70px;
+  font-size: 48px;
+  vertical-align: middle;
+  background-color: #C40000;
+  text-align: center;
+  box-shadow: 10px 10px;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
+.header a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer {
+  margin: auto 60px;
+  min-height: 30px;
+  line-height: 25px;
+  font-size: 25px;
+  vertical-align: middle;
+  background-color: #c40000;
+  text-align: center;
+  box-shadow: 10px 10px;
+}
+
+/* HR */
+.horizontal-line {
+  color: white;
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  width: 70%;
+}
+
+/* FILE UPLOAD */
+.file-upload-select {
+  align-content: center;
+  width: 70%;
+  margin: 30px auto;
+}
+
+/* DATABASE SELECT */
+.database-select {
+  align-content: center;
+  width: 70%;
+  margin: 30px auto;
+}
+
+.multi-select {
+  height: 60px;
+  line-height: 40px;
+}
+
+/* GENE SETS SELECT */
+.gene-sets-select {
+  align-content: center;
+  width: 70%;
+  margin: 30px auto;
+}
+
+.radio-genes {
+  font-size: 20px;
+}
+
+.gene-set-input {
+  margin: 30px auto;
+}
+
+/* TEST TYPE SELECT */
+.test-type-select {
+  align-content: center;
+  width: 70%;
+  margin: 30px auto;
+}
+
+.radio-tests {
+  font-size: 20px;
+}
+
+/* SUBMIT BUTTON */
+.btn-lg {
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 24px;
+  letter-spacing: 10px;
+  background: #2EE59D;
+  border: none;
+}
+
+.btn-lg:hover {
+  background: #1bce87;
+  border: none;
+  box-shadow: 0px 10px 15px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px);
+}
+
+/* MODAL */
+.exit-modal {
+  text-align: center;
+}
+
+.exit-modal h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.exit-modal button {
+  border-radius: 10%;
+  margin: 0 50px 15px 50px;
+  padding: 5px 15px 5px 15px;
+  font-size: 20px;
+}
+
+.yes-button {
+  background-color: #eb5b5b;
+  border: none;
+  color: white;
+  width:10%;
+  display:inline;
+}
+
+.yes-button:hover {
+  background-color: #c40000;
+  border: none;
+  color: white;
+}
+
+.no-button {
+  background-color: #8b9df2;
+  border: none;
+  color: white;
+  width:10%;
+  display:inline;
+}
+
+.no-button:hover {
+  background-color: #2d4ff5;
+  border: none;
+  color: white;
+}
+
+/* PLOT */
+#plotly-plot {
+  margin: 30px auto;
+  width: 90%;
+  min-height: 600px;
+}
+
+/* TABLE */
+.table-wrapper {
+  margin: 30px auto;
+  width: 90%;
+}
+
+.hommel-results-table {
+  background-color: white;
+}

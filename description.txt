@@ -1,0 +1,8 @@
+input types
+  filename
+  databases
+  selected databases
+  gene sets mode
+  gene sets values
+  test type mode
+  test type values

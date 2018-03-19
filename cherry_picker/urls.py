@@ -1,6 +1,9 @@
 from django.conf.urls import url
-from .views import IndexView
+from .views import upload_file
 
-url_patterns = [
-    url(r'^$', IndexView.as_view(), name='cherry_picker_main')
+app_name = 'cherry_picker'
+
+
+urlpatterns = [
+    url(r'^upload_file', upload_file, name='cherry_picker_upload_file')
 ]

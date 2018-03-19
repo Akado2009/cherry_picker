@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <style>
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif');
   </style>
-  <title>Cherry Picker</title>
+  <title>Document</title>
 </head>
 <body>
   {% load render_bundle from webpack_loader %}
   {% load static %}
 
   {% block content %}
-      <div id="app"></div>
+      <div id="report"></div>
 
-      {% render_bundle 'main' %}
+      {% render_bundle 'report' %}
   {% endblock %}
 
 </body>

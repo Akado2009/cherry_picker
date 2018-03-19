@@ -4,12 +4,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import url, include
 
-from cherry_picker.views import IndexView
+from cherry_picker.views import IndexView, ReportView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', IndexView.as_view(), name='index'),
-    # url(r'^cherry_picker/', include(('cherry_picker.urls', 'cherry_picker'), namespace='cherry_picker')),
+    url(r'^report/$', ReportView.as_view(), name='report'),
+    url(r'^cherry_picker/', include('cherry_picker.urls', namespace='cherry_picker')),
 
 ]
 

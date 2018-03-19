@@ -1,16 +1,20 @@
 var path = require('path')
 var webpack = require('webpack')
 var BundleTracker = require('webpack-bundle-tracker')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+
 
 module.exports = {
   context: __dirname,
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './static/js/main'
+    './static/js/main',
+    './static/js/report'
   ],
   entry: {
     main: './static/js/main',
+    report: './static/js/report',
   },
   output: {
     path: path.resolve('./static/bundles'),
@@ -24,12 +28,13 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
-    })
+    }),
   ],
   module: {
       loaders: [
           {
               test: /\.jsx?$/,
+              exclude: /(node_modules|bower_components)/,
               loader: 'babel-loader',
               query: {
                 presets: ['react', 'es2015']
@@ -62,7 +67,8 @@ module.exports = {
           {
               test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
               loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
-          }
+          },
+
       ]
   },
   devtool: "source-map",

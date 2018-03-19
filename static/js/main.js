@@ -1,6 +1,36 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from './components/Main'
+import { Provider } from "react-redux";
+import store from "./store";
 
-import App from './Components/Main'
+import '../styles/base.css'
 
-ReactDOM.render(<App />, document.getElementById('app'))
+
+const initialState = {
+  filename: '',
+  databases: [
+    'FIRST',
+    'SECOND',
+    'THREE'
+  ],
+  selectedDatabases: [
+
+  ],
+  geneSetsMode: '',
+  geneSets: [
+    'ONE',
+    'TWO',
+    'THREE'
+  ],
+  testTypeMode: '',
+  testTypeChosen: [
+
+  ]
+};
+
+ReactDOM.render(
+  <Provider store={store.configure(initialState)}>
+    <App />
+  </Provider>
+  , document.getElementById('app'))
