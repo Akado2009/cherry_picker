@@ -10,7 +10,7 @@ class TestType extends React.Component {
       iconSize: 25,
       iconInnerSize: 15,
       roolColor: 'white',
-      pointColor: '#2EE59D',
+      pointColor: '#C40000',
     }
 
     return (
@@ -27,14 +27,11 @@ class TestType extends React.Component {
           <RadioButton value="choose"  {...style}>
             Choose composition
           </RadioButton>
-          <RadioButton value="all"  {...style}>
-            All
-          </RadioButton>
           </RadioGroup>
         </section>
         { this.props.mode == 'choose' &&
           <section className="test-type-input">
-            idi nahooi
+            Test Type Input
           </section>
         }
       </div>

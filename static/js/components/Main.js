@@ -25,22 +25,59 @@ class App extends React.Component {
     this.props.addDatabase('SHIT')
 
   }
+
   render () {
+    let filenameChosen = false
+    let databaseChosen = false
+    let geneSetsChosen = false
+
+    for(let db of this.props.databases) {
+      if (db.value == true) {
+        databaseChosen = true
+      }
+    }
+
+    for(let set of this.props.geneSets) {
+      if (set.value == true) {
+        geneSetsChosen = true
+      }
+    }
+
+    if (this.props.geneMode == 'all') {
+      geneSetsChosen = true
+    }
+
     return(
       <div className="container">
         <Header />
         <div className="inner-container">
         <FileUploader />
         <hr className="horizontal-line" />
-        <DatabaseSelect />
-        <hr className="horizontal-line" />
-        <GeneSets />
-        <hr className="horizontal-line" />
-        <TestType />
-        <hr className="horizontal-line" />
+        {
+        this.props.filename &&
+        <div>
+          <DatabaseSelect />
+          <hr className="horizontal-line" />
+        </div>
+        }
+        {
+        databaseChosen &&
+        <div>
+          <GeneSets />
+          <hr className="horizontal-line" />
+        </div>
+        }
+
+        {
+        geneSetsChosen &&
+        <div>
+          <TestType />
+          <hr className="horizontal-line" />
+        </div>
+        }
         <Submit />
         </div>
-        <Footer />
+        {/*<Footer /> */}
       </div>
     )
   }
@@ -49,7 +86,10 @@ class App extends React.Component {
 const stateToProps = (state) => {
     const newStore = state.inputs
     return {
-        databases: newStore.databases
+        databases: newStore.databases,
+        filename: newStore.filename,
+        geneSets: newStore.geneSets,
+        geneMode: newStore.geneSetsMode
     }
 }
 

@@ -5,48 +5,40 @@ const initialState = {
   databases: [
     {
       id: 1,
-      label: 'FIRST',
-      value: true,
+      label: 'GO',
+      value: false,
     },
     {
       id: 2,
-      label: 'SECOND',
-      value: true,
+      label: 'WIKI PATHWAYS',
+      value: false,
     },
     {
       id: 3,
-      label: 'THIRD',
-      value: true,
-    },
-    {
-      id: 4,
-      label: 'FOURTH',
-      value: true,
-    },
-    {
-      id: 5,
-      label: 'FIFTH',
-      value: true,
-    },
-    {
-      id: 6,
-      label: 'SIXTH',
-      value: true,
-    },
-    {
-      id: 7,
-      label: 'SEVENTH',
-      value: true,
-    },
+      label: 'REACTOME',
+      value: false,
+    }
   ],
   selectedDatabases: [
 
   ],
   geneSetsMode: '',
   geneSets: [
-    'ONE',
-    'TWO',
-    'THREE'
+    {
+      id: 1,
+      label: 'First set',
+      value: false,
+    },
+    {
+      id: 2,
+      label: 'Second set',
+      value: false,
+    },
+    {
+      id: 3,
+      label: 'Third set',
+      value: false,
+    }
   ],
   testTypeMode: '',
   testTypeChosen: [
@@ -62,7 +54,7 @@ export default function inputs(state = initialState, action) {
     case types.CHANGE_FILENAME:
       return {
         ...state,
-        filename: action.filename
+        filename: [action.filename]
       }
 
     case types.ADD_DATABASE:
@@ -75,7 +67,7 @@ export default function inputs(state = initialState, action) {
       if (action.mode == 'custom') {
         return {
           ...state,
-          genesets: []
+          geneSetsMode: action.mode
         }
       }
       return {
@@ -84,11 +76,10 @@ export default function inputs(state = initialState, action) {
       }
 
     case types.ADD_GENE_SET:
-      const geneSets = state.geneSets
-      geneSets.indexOf(set) === -1 ? geneSets.push(set) : false
+      console.log(action)
       return {
         ...state,
-        getSets: geneSets
+        geneSets: action.set
       }
 
     case types.CHANGE_TEST_TYPE:

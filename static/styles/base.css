@@ -1,5 +1,13 @@
+.test-type-input {
+  color: white;
+}
+
+.gene-set-input h2{
+  color: white;
+}
+
 body {
-  background-color: #3D3D3D;
+  background-color: black;
   font-family: 'IBM Plex Serif', serif;
   text-align: center;
 }
@@ -24,7 +32,7 @@ h3 {
 
 .header {
   margin: auto 60px;
-  min-height: 60px;
+  min-height: 80px;
   line-height: 70px;
   font-size: 48px;
   vertical-align: middle;
@@ -43,6 +51,11 @@ h3 {
   cursor: pointer;
 }
 
+.header-image {
+  margin: 5px 0px 5px 30px;
+  max-width: 60px;
+  max-height: 60px;
+}
 /* FOOTER */
 
 .footer {
@@ -70,6 +83,12 @@ h3 {
   align-content: center;
   width: 70%;
   margin: 30px auto;
+}
+
+.uploaded-files{
+  list-style: none;
+  color: white;
+  text-align: center;
 }
 
 /* DATABASE SELECT */
@@ -116,14 +135,14 @@ h3 {
   font-weight: bold;
   border-radius: 24px;
   letter-spacing: 10px;
-  background: #2EE59D;
+  background: #C40000;
   border: none;
 }
 
 .btn-lg:hover {
-  background: #1bce87;
+  background: #C40000;
   border: none;
-  box-shadow: 0px 10px 15px rgba(46, 229, 157, 0.4);
+  box-shadow: 0px 10px 15px rgba(226, 0, 0, 0.4);
   transform: translateY(-7px);
 }
 
@@ -188,4 +207,22 @@ h3 {
 
 .hommel-results-table {
   background-color: white;
+}
+
+.dataTables_filter, .dataTables_length, .dataTables_info {
+  color: white !important;
+}
+
+.page-item.active .page-link  {
+  background-color: #C40000 !important;
+  border-color: #E90000 !important;
+}
+
+.page-link {
+  color: black !important;
+}
+
+.form-control:focus {
+  border-color: #C40000 !important;
+  box-shadow: 0 0 0 0.2rem rgba(156, 0, 0, .25);
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../../actions/InputActions'
-import  MultiSelectReact  from 'multi-select-react';
+import  MultiSelectReact  from 'multi-select-react'
 
 
 
@@ -9,15 +9,14 @@ class DatabaseSelect extends React.Component {
   render () {
 
     const selectedOptionsStyles = {
-      color: "#3c763d",
-      backgroundColor: "#dff0d8"
+      color: "black",
+      backgroundColor: "#C40000"
     }
 
     const optionsListStyles = {
-        backgroundColor: "#dff0d8",
-        color: "#3c763d"
+        backgroundColor: "#C40000",
+        color: "black"
     }
-
     return (
       <div className="database-select">
         <h1>Select Database</h1>

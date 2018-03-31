@@ -18,7 +18,7 @@ class Report extends React.Component {
           <hr className="horizontal-line" />
           <Return />
         </div>
-      <Footer />
+      {/*<Footer /> */}
       </div>
     )
   }

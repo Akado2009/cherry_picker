@@ -14,8 +14,7 @@ class FileUploader extends React.Component {
     super()
 
     this.state = {
-      uploading: false,
-      filename: []
+      uploading: false
     }
 
   }
@@ -32,20 +31,20 @@ class FileUploader extends React.Component {
     req.end(function(err,response){
         console.log("upload done!!!!!");
     });
+    this.props.changeFilename(acceptedFiles[0])
   }
 
   render () {
     const dropzoneStyle = {
       width  : "70%",
       height : "200px",
-      border : "2px dotted #2EE59D",
+      border : "2px dotted #C40000",
       textAlign: "center",
       margin: "0px auto",
       lineHeight: "80px",
       color: "white",
       fontSize: "24px"
     };
-
 
     return (
       <div className="file-upload-select">
@@ -58,11 +57,13 @@ class FileUploader extends React.Component {
           </div>
           <aside>
             <h3>Uploaded file</h3>
+            { this.props.filename &&
             <ul className="uploaded-files">
               {
-                this.state.filename.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
+                this.props.filename.map(f => <li key={f.name}><em>{f.name} - {f.size} bytes</em></li>)
               }
             </ul>
+            }
           </aside>
         </section>
       </div>

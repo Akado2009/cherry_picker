@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../../actions/InputActions'
 import { RadioGroup, RadioButton } from 'react-radio-buttons'
+import  MultiSelectReact  from 'multi-select-react'
 
 
 class GeneSets extends React.Component {
@@ -11,7 +12,17 @@ class GeneSets extends React.Component {
       iconSize: 25,
       iconInnerSize: 15,
       roolColor: 'white',
-      pointColor: '#2EE59D',
+      pointColor: '#C40000',
+    }
+
+    const selectedOptionsStyles = {
+      color: "black",
+      backgroundColor: "#C40000"
+    }
+
+    const optionsListStyles = {
+        backgroundColor: "#C40000",
+        color: "black"
     }
 
     return (
@@ -28,9 +39,16 @@ class GeneSets extends React.Component {
           </RadioGroup>
         </section>
         { this.props.mode == 'custom' &&
-          <section className="gene-set-input">
-            debil
-          </section>
+        <section className="gene-set-input">
+          <h2>Gene Sets Input</h2>
+          <MultiSelectReact
+            className="multi-select"
+            options={this.props.geneSets}
+            optionClicked={this.props.addGeneSet}
+            selectedBadgeClicked={this.props.addGeneSet}
+            selectedOptionsStyles={selectedOptionsStyles}
+            optionsListStyles={optionsListStyles} />
+        </section>
         }
       </div>
     )
@@ -42,7 +60,7 @@ const stateToProps = (state) => {
     const newStore = state.inputs
     return {
         mode: newStore.geneSetsMode,
-        sets: newStore.geneSets
+        geneSets: newStore.geneSets
     }
 }
 

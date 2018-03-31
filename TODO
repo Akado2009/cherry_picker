@@ -1,0 +1,17 @@
+1. Loader after clicking submit
+2. Get gene info from input table
+Upload -> tell im using ensembl -> 3 databases possible (updated frequently)
+settings.json -> upload -> redo the same experiment
+gene sets are custom for a database
+
+database - ID; VERSION; BASED ON BIOLOGY/GENE SETS
+GO | WIKI PATHWAYS | REACTOME
+
+removing ALL  + MULTIPLE SELECTION (eveything +- competetive)
+
+
+output
+
+info about pathway + upregulated|downregulated
+if they proviede FC -> give it in output
+ask what does each column mean

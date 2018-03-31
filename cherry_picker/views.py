@@ -20,12 +20,8 @@ class ReportView(TemplateView):
 
 def upload_file(request):
     if request.method == 'POST':
-        print(request.FILES)
         g = open('shit.png', 'wb')
         g.write(request.FILES.get('file').read())
         g.close()
-
-
-
 
     return JsonResponse({'data': 'data'})

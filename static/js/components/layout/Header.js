@@ -1,9 +1,11 @@
 import React from 'react'
 
 
+import CHERRY from '../../../img/cherry.png'
+
 const Header = () => (
   <div className="header">
-    <a href="/"> Cherry Picker</a>
+    <a href="/"><img src={CHERRY} className="header-image"/> Cherry Picker</a>
   </div>
 )
 
