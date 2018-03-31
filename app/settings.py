@@ -7,7 +7,8 @@ SECRET_KEY = 'c^6&n3jkekv#s-6^8+(1y5@ee-amtf(kh&_4-$2iz92rkch*-0'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*, 'cherry-picker-2018.herokuapp.com', '127.0.0.1:8000'
+]
 
 
 # Application definition
@@ -34,6 +35,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
 
 ROOT_URLCONF = 'app.urls'
