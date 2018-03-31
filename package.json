@@ -49,6 +49,6 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0"
   },
   "scripts":{
-    "build": "./node_modules/.bin/webpack --config webpack.config.production.js",
+    "build": "./node_modules/.bin/webpack --config webpack.config.production.js"
   }
 }
